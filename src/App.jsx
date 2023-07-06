@@ -1,37 +1,36 @@
-const data = [
-  {
-      id: "1",
-      name: "Mark",
-      description: "Tall and handsome",
-      age: "27"
+import "./App.css";
+import DessertsList from "./DessertsList";
 
+const desserts = [
+  {
+    name: "Chocolate Cake",
+    calories: 400,
+    createdAt: "2022-09-01",
   },
   {
-      id: "1",
-      name: "Sam",
-      description: "Short and hardworking",
-      age: "29"
+    name: "Ice Cream",
+    calories: 200,
+    createdAt: "2022-01-02",
   },
   {
-      id: "1",
-      name: "Rob",
-      description: "Average and funny",
-      age: "30"
-  }
+    name: "Tiramisu",
+    calories: 300,
+    createdAt: "2021-10-03",
+  },
+  {
+    name: "Cheesecake",
+    calories: 600,
+    createdAt: "2022-01-04",
+  },
 ];
+
 function App() {
-  const topStudents = data.map(student => {
-    const studentInfo = `${student.name} - ${student.description}`
-    // eslint-disable-next-line react/jsx-key
-    return <li>{studentInfo}</li>
-  }) 
   return (
-    <div>
-      <ul>
-        {topStudents}
-      </ul>
+    <div className="App">
+      <h2>List of low calorie desserts:</h2>
+      <DessertsList data={desserts} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
