@@ -19,13 +19,19 @@ const data = [
       age: "30"
   }
 ];
-const topStudents = data.map(student => {
-  return {
-      info: `${student.name} - ${student.description}`,
-      age: student.age,
-  }
-}) 
-
-export default function App() {
-  console.log(topStudents);
+function App() {
+  const topStudents = data.map(student => {
+    const studentInfo = `${student.name} - ${student.description}`
+    // eslint-disable-next-line react/jsx-key
+    return <li>{studentInfo}</li>
+  }) 
+  return (
+    <div>
+      <ul>
+        {topStudents}
+      </ul>
+    </div>
+  )
 }
+
+export default App
