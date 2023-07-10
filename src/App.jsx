@@ -1,5 +1,6 @@
 import "./App.css";
-import DessertsList from "./DessertsList";
+import Forms from "./components/Forms";
+import DessertsList from "./components/DessertsList";
 
 const desserts = [
   {
@@ -29,6 +30,7 @@ function App() {
     <div className="App">
       <h2>List of low calorie desserts:</h2>
       <DessertsList data={desserts} />
+      <Forms />
     </div>
   );
 }
