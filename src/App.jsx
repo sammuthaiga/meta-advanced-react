@@ -1,6 +1,7 @@
 import "./App.css";
 import Forms from "./components/Forms";
 import DessertsList from "./components/DessertsList";
+import Feedback from "./components/Feedback";
 
 const desserts = [
   {
@@ -31,6 +32,7 @@ function App() {
       <h2>List of low calorie desserts:</h2>
       <DessertsList data={desserts} />
       <Forms />
+      <Feedback />
     </div>
   );
 }
