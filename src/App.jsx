@@ -2,6 +2,7 @@ import "./App.css";
 import Forms from "./components/Forms";
 import DessertsList from "./components/DessertsList";
 import Feedback from "./components/Feedback";
+import RegistrationForm from "./components/RegistrationForm";
 
 const desserts = [
   {
@@ -33,6 +34,7 @@ function App() {
       <DessertsList data={desserts} />
       <Forms />
       <Feedback />
+      <RegistrationForm />
     </div>
   );
 }
